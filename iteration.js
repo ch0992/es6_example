@@ -14,3 +14,10 @@ console.log(iterator.next());
 console.log(iterator.next());          
 console.log(iterator.next());     
 console.log(iterator.next());     
+
+let iterator = {
+    i:1,
+    next:function () {
+        return (this.i < 4) ? {value:this.i++, done:false} : {value:undefined, done:true}
+    }
+}
